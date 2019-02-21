@@ -1,0 +1,8 @@
+{
+  "name": "unboxed",
+  "private": true,
+  "dependencies": {
+    "altai_center": "^0.0.3",
+    "jquery": "^3.3"
+  }
+}

@@ -1,0 +1,1 @@
+var jQuery;!function(c){c.fn.extend({altaiCenter:function(e){var n,t,d,i=c(this);d={debug:!1},d=c.extend(d,e),t=function(e){return d.debug?("undefined"===console&&console,console.log(e)):undefined},n=function(){i.wrap("<div class='center-h-parent'><div class='center-h-child'></div></div>")},0<i.length&&(n(),t("Altai Center Activated"))}})}(jQuery,window,document);

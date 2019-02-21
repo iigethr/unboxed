@@ -1,0 +1,15 @@
+# Application configuration
+
+default: &default
+  title: "Unboxed"
+  description: "A GitHub test."
+  twitter_username: "@ubxd"
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

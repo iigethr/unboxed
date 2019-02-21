@@ -1,0 +1,1 @@
+define(["../var/class2type","../var/toString"],function(e,n){"use strict";function t(t){return null==t?t+"":"object"==typeof t||"function"==typeof t?e[n.call(t)]||"object":typeof t}return t});
