@@ -14,3 +14,20 @@
     .content-item
       %h1.text-center= t("dashboard.title")
       %p.text-center= t("dashboard.description")
+
+/* Search form */
+- if !@username.presence
+  = form_tag dashboard_index_path, method: "get", class: "col-extra-small-1-1 altai-center" do
+    %fieldset
+      .field-row
+        .field
+          .input.pg-12
+            = text_field_tag :username, nil, class: "text-center", placeholder: t("dashboard.form.input")
+      .field-row
+        .field
+          .submit
+            = submit_tag t("dashboard.form.submit"), name: nil, class: "button double-extra-large green wide pg-16"
+          // .separator.double-extra-small
+          // %p.reference.text-center
+          //   %strong Note:
+          //   you need to provide a valid username.

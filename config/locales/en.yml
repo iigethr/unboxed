@@ -6,3 +6,6 @@ en:
   dashboard:
     title: "Unboxed"
     description: "A GitHub test."
+    form:
+      input: 'insert "username"'
+      submit: "Find users favourite language"
