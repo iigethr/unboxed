@@ -8,4 +8,4 @@ en:
     description: "A GitHub test."
     form:
       input: 'insert "username"'
-      submit: "Find users favourite language"
+      submit: "Find User's favorite Language"

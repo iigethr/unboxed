@@ -1,0 +1,142 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    User
+// Project: Unboxed
+// -------------------------------------------------------------
+
+$class: "user";
+
+.#{$class} {
+  @include border-box;
+  float: left;
+  width: 720px;
+  .#{$class}-box {
+    @include border-box;
+    float: left;
+    padding: 8px;
+    width: 100%;
+    .#{$class}-item {
+      @include border-box;
+      background-color: $gray-000;
+      float: left;
+      min-height: 104px;
+      padding: 16px;
+      width: 100%;
+      .#{$class}-left {
+        @include border-box;
+        @include border-corner(4px);
+        background-color: $black;
+        float: left;
+        height: 72px;
+        margin: 0 8px 0 0;
+        width: 72px;
+      }
+      .#{$class}-right {
+        @include border-box;
+        float: left;
+        margin: 0 0 0 8px;
+        min-height: 72px;
+        width: 568px;
+        p {
+          width: auto;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+      .#{$class}-inner {
+        @include border-box;
+        float: left;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Media Query 240px
+// -------------------------------------------------------------
+@media #{$double-extra-small} {
+  .#{$class} {
+    width: 240px;
+    .#{$class}-box {
+      .#{$class}-item {
+        .#{$class}-right {
+          width: 88px;
+        }
+      }
+    }
+  }
+}
+
+// Media Query 360px
+// ------------------------------------------------------------
+@media #{$extra-small} {
+  .#{$class} {
+    width: 360px;
+    .#{$class}-box {
+      .#{$class}-item {
+        .#{$class}-right {
+          width: 208px;
+        }
+      }
+    }
+  }
+}
+
+// Media Query 480px
+// -------------------------------------------------------------
+@media #{$small} {
+  .#{$class} {
+    width: 480px;
+    .#{$class}-box {
+      .#{$class}-item {
+        .#{$class}-right {
+          width: 328px;
+        }
+      }
+    }
+  }
+}
+
+// Media Query 720px
+// -------------------------------------------------------------
+@media #{$medium} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$extra-large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$double-extra-large} {
+  .#{$class} {
+    .#{$class}-box {
+      .#{$class}-item {
+      }
+    }
+  }
+}

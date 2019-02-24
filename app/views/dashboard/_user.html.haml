@@ -1,0 +1,20 @@
+/* User */
+
+.user.altai-center
+  .user-box
+    .user-item
+      .user-left
+      .user-right
+        .user-inner
+          %p.left.auto
+            %strong= user[:username]
+            = image_tag "icons/favorite.png"
+            %strong Language
+          // Last Checked
+          // %p.small.right.auto
+          //   %strong Last Checked:
+          //   dd-mm-yyyy
+          //   \::
+          //   = link_to "Check again", "#"
+        .user-inner
+          %p.left.gray-500-cl  User profile bio.
