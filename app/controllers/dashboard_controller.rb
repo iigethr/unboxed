@@ -3,12 +3,12 @@
 class DashboardController < ApplicationController
   # /
   def index
-    @name ||= params[:name]
+    @name = params[:name]
     if User.where(name: @name).presence
-      flash[:notice] = "The user does exist in the database. Yayyyyy!!!"
-      @user ||= User.where(name: @name).first
-    else
-      flash[:notice] = "The user doesn't exist in the database. Damn!!! Now we should look into GitHub and see if the user exists there."
+      flash.now[:notice] = "The user does exist in the database. Yayyyyy!!!"
+      @user = User.where(name: @name).first
+    elsif (params.has_key?(:name) || !params[:name].blank?)
+      flash.now[:notice] = "The user doesn't exist in the database. Damn!!! Now we should look into GitHub and see if the user exists there."
     end
   end
 
