@@ -7,3 +7,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+64.times do |object|
+  User.create(
+    {
+      name: "name#{object}",
+      bio: "This is the name#{object}'s bio.",
+      favorite_language: "Ruby"
+    }
+  )
+end

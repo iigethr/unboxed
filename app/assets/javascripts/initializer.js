@@ -4,6 +4,7 @@
 bindEvents = function() {
   $(".altai-center").altaiCenter();
 
+  // NOTE: Clean this code. Too messy dude!!!
   // easyAutocomplete
   var list = [
     "apples",
@@ -33,7 +34,9 @@ bindEvents = function() {
   var submitButton = $("input[type='submit']");
   var searchInput = $("input.search");
   var options = {
-    data: list,
+    // data: list,
+    url: "/users.json",
+    getValue: "name",
     list: {
       maxNumberOfElements: 3,
       match: {
@@ -43,16 +46,27 @@ bindEvents = function() {
   };
   submitButton.hide();
   searchInput.easyAutocomplete(options);
-  searchInput.keyup(function(event) {
+  searchInput.on("keyup keypress", function(event) {
     // Avoid white space
     if (event.which == 32) {
       return false;
     };
-    // Hide & show submit button based on case.
+    // Hide & show submit button based on condition.
     if (searchInput.val() == "") {
       submitButton.hide();
     } else {
       submitButton.show();
+    };
+  });
+
+  searchInput.on("blur", function() {
+    submitButton.hide();
+  });
+
+  searchInput.on("focus", function() {
+    submitButton.show();
+    if (searchInput.val() == "") {
+      submitButton.hide();
     };
   });
 };

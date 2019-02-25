@@ -14,6 +14,9 @@
     .content-item
       %h1.text-center= t("dashboard.title")
       %p.text-center= t("dashboard.description")
+    - if flash[:notice]
+      .content-item
+        %p.text-center= flash[:notice]
 
 /* Search form */
 = form_tag dashboard_index_path, method: "get", class: "col-small-1-1 altai-center", autocomplete: :off do
@@ -21,7 +24,7 @@
     .field-row
       .field
         .input.pg-12
-          = text_field_tag :username, nil, class: "search"
+          = text_field_tag :name, nil, class: "search"
     .field-row
       .field
         .submit

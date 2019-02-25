@@ -7,9 +7,9 @@
       .user-right
         .user-inner
           %p.left.auto
-            %strong= user[:username]
+            %strong= user.name
             = image_tag "icons/favorite.png"
-            %strong Language
+            %strong= user.favorite_language
           // Last Checked
           // %p.small.right.auto
           //   %strong Last Checked:
@@ -17,4 +17,4 @@
           //   \::
           //   = link_to "Check again", "#"
         .user-inner
-          %p.left.gray-500-cl  User profile bio.
+          %p.left.gray-500-cl= user.bio

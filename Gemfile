@@ -28,8 +28,8 @@ gem "turbolinks", "~> 5"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.5"
 # Load Mies
-# gem "mies", "0.0.1.alpha", github: "iigethr/mies"
-gem "mies", "0.0.1.alpha", path: "/Users/tonydefaria/Box Sync/iigethr/gems/mies"
+gem "mies", "0.0.1.alpha", github: "iigethr/mies"
+# gem "mies", "0.0.1.alpha", path: "/Users/tonydefaria/Box Sync/iigethr/gems/mies"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
