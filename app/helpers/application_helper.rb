@@ -8,6 +8,6 @@ module ApplicationHelper
 
   # User avatar
   def user_avatar(user = "")
-    image_tag user.try(:avatar_url) || "avatar.png"
+    image_tag user.try(:avatar_url) || "https://picsum.photos/512/512/?random"
   end
 end

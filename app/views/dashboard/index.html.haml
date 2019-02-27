@@ -4,7 +4,8 @@
 .hero
   .hero-box
     .hero-item.altai-center
-      = image_tag "octocat.png", title: "Unboxed - A GitHub test.", alt: "hero image"
+      // = image_tag "octocat.png", title: "Unboxed - A GitHub test.", alt: "hero image"
+      = image_tag "icons/favorite.png"
 
 .separator.extra-small
 
@@ -12,27 +13,25 @@
 .content
   .content-box
     .content-item
-      %h1.text-center= t("dashboard.title")
-      %p.text-center= t("dashboard.description")
+      %h1.text-center.purple-500-cl= t("dashboard.title")
+      %p.text-center.gray-500-cl= t("dashboard.description")
     - if flash[:notice]
       .content-item
         %p.text-center= flash[:notice]
 
 - if @user.presence
   = render partial: "user", locals: { user: @user }
-// Need to add if the search comes back empty!!!
 
-/* Search form */
-= form_tag dashboard_index_path, method: "get", class: "col-medium-1-1 altai-center", autocomplete: :off do
-  %fieldset
-    .field-row
-      .field
-        .input.pg-12
-          = text_field_tag :login, nil, class: "search"
-    .field-row
-      .field
-        .submit
-          = submit_tag t("dashboard.form.submit"), name: nil, class: "button double-extra-large green wide pg-16"
-
-- if @users.presence && !@user.presence
-  = render partial: "users", locals: { users: @users }
+- if !@user.presence
+  .separator.small
+  /* Search form */
+  = form_tag dashboard_index_path, method: "get", class: "altai-center", autocomplete: :off do
+    %fieldset
+      .field-row
+        .field
+          .input.pg-12
+            = text_field_tag :login, nil, class: "search", placeholder: "Insert username"
+      .field-row
+        .field
+          .submit
+            = submit_tag t("dashboard.form.submit"), name: nil, class: "button double-extra-large purple wide pg-16"

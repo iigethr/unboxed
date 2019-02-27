@@ -1,7 +1,9 @@
 /* User */
 
+.separator.small
 .user.altai-center
   .user-box
+    .separator.small.glow
     .user-item
       .user-left
         = user_avatar(user)
@@ -18,4 +20,7 @@
           //   \::
           //   = link_to "Check again", "#"
         .user-inner
-          %p.left.gray-500-cl= user.bio
+          %p.small.left.gray-500-cl= user.bio
+    .separator.small.glow
+    .user-item
+      = link_to "[Clear & Search Again]", root_path, class: "link small altai-center"

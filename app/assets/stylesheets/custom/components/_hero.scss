@@ -16,7 +16,7 @@ $class: "hero";
     .#{$class}-item {
       @include border-box;
       float: left;
-      width: 240px;
+      width: 96px;
       img {
         width: 100%;
       }

@@ -12,12 +12,12 @@
   id = object + 1
   User.create(
     {
-      login: "login#{id}",
+      login: "username#{id}",
       login_type: "user",
       name: "Bibendum Ligula",
       bio: "Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.",
       public_repos: 10,
-      favorite_language: "Nullam Condimentum"
+      favorite_language: "ruby"
     }
   )
 end

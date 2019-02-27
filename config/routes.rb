@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   root "dashboard#index"
   resources :dashboard, only: :index
   # Users
-  resources :users, only: :index, constraints: { format: "json" }
+  resources :users, only: :index
 end

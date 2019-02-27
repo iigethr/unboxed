@@ -1,59 +1,20 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File:    User
+// File:    Primary navigation
 // Project: Unboxed
 // -------------------------------------------------------------
 
-$class: "user";
+$class: "primary-navigation";
 
 .#{$class} {
   @include border-box;
-  float: left;
-  width: 720px;
+  float: right;
   .#{$class}-box {
     @include border-box;
     float: left;
-    padding: 8px;
-    width: 100%;
     .#{$class}-item {
       @include border-box;
-      @include border-corner(4px);
-      background-color: $gray-000;
-      // background: linear-gradient(0deg, $gray-200 0%, $gray-000 50%, $gray-200 100%);
-      // border: 1px solid $gray-300;
       float: left;
-      min-height: 104px;
-      padding: 16px;
-      width: 100%;
-      .#{$class}-left {
-        @include border-box;
-        @include border-corner(4px);
-        background-color: transparent;
-        float: left;
-        height: 72px;
-        margin: 0 8px 0 0;
-        width: 72px;
-        img {
-          @include border-corner(4px);
-        }
-      }
-      .#{$class}-right {
-        @include border-box;
-        float: left;
-        margin: 0 0 0 8px;
-        min-height: 72px;
-        width: 584px;
-        p {
-          width: auto;
-        }
-        span {
-          font-size: 12px;
-        }
-      }
-      .#{$class}-inner {
-        @include border-box;
-        float: left;
-        width: 100%;
-      }
+      padding: 8px;
     }
   }
 }
@@ -62,12 +23,8 @@ $class: "user";
 // -------------------------------------------------------------
 @media #{$double-extra-small} {
   .#{$class} {
-    width: 240px;
     .#{$class}-box {
       .#{$class}-item {
-        .#{$class}-right {
-          width: 104px;
-        }
       }
     }
   }
@@ -77,12 +34,8 @@ $class: "user";
 // ------------------------------------------------------------
 @media #{$extra-small} {
   .#{$class} {
-    width: 360px;
     .#{$class}-box {
       .#{$class}-item {
-        .#{$class}-right {
-          width: 224px;
-        }
       }
     }
   }
@@ -92,12 +45,8 @@ $class: "user";
 // -------------------------------------------------------------
 @media #{$small} {
   .#{$class} {
-    width: 480px;
     .#{$class}-box {
       .#{$class}-item {
-        .#{$class}-right {
-          width: 344px;
-        }
       }
     }
   }
