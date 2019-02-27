@@ -9,11 +9,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 64.times do |object|
+  id = object + 1
   User.create(
     {
-      name: "name#{object}",
-      bio: "This is the name#{object}'s bio.",
-      favorite_language: "Ruby"
+      login: "login#{id}",
+      login_type: "user",
+      name: "Bibendum Ligula",
+      bio: "Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+      public_repos: 10,
+      favorite_language: "Nullam Condimentum"
     }
   )
 end

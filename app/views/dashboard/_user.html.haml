@@ -4,10 +4,11 @@
   .user-box
     .user-item
       .user-left
+        = user_avatar(user)
       .user-right
         .user-inner
           %p.left.auto
-            %strong= user.name
+            %strong= user.login
             = image_tag "icons/favorite.png"
             %strong= user.favorite_language
           // Last Checked

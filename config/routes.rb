@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   # Root Controller
   root "dashboard#index"
-  resources :dashboard, only: [:index]
+  resources :dashboard, only: :index
   # Users
-  resources :users
+  resources :users, only: :index, constraints: { format: "json" }
 end

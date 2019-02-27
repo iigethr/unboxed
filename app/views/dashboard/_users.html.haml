@@ -1,8 +1,23 @@
 /* Users */
 
-.content
-  .content-box
-    .content-item
-      %ul
-        - users.each do |user|
-          %li= user.name
+.user.altai-center
+  .user-box
+    - users.each do |user|
+      .user-item
+        .user-left
+          = user_avatar(user)
+        .user-right
+          .user-inner
+            %p.left.auto
+              %strong= user.login
+              = image_tag "icons/favorite.png"
+              %strong= user.favorite_language
+            // Last Checked
+            // %p.small.right.auto
+            //   %strong Last Checked:
+            //   dd-mm-yyyy
+            //   \::
+            //   = link_to "Check again", "#"
+          .user-inner
+            %p.left.gray-500-cl= user.bio
+      .separator.small

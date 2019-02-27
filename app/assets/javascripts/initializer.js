@@ -36,7 +36,7 @@ bindEvents = function() {
   var options = {
     // data: list,
     url: "/users.json",
-    getValue: "name",
+    getValue: "login",
     list: {
       maxNumberOfElements: 3,
       match: {
@@ -44,7 +44,7 @@ bindEvents = function() {
       }
     }
   };
-  submitButton.hide();
+  // submitButton.hide();
   searchInput.easyAutocomplete(options);
   searchInput.on("keyup keypress", function(event) {
     // Avoid white space
@@ -52,23 +52,23 @@ bindEvents = function() {
       return false;
     };
     // Hide & show submit button based on condition.
-    if (searchInput.val() == "") {
-      submitButton.hide();
-    } else {
-      submitButton.show();
-    };
+    // if (searchInput.val() == "") {
+    //   submitButton.hide();
+    // } else {
+    //   submitButton.show();
+    // };
   });
 
-  searchInput.on("blur", function() {
-    submitButton.hide();
-  });
+  // searchInput.on("blur", function() {
+  //   submitButton.hide();
+  // });
 
-  searchInput.on("focus", function() {
-    submitButton.show();
-    if (searchInput.val() == "") {
-      submitButton.hide();
-    };
-  });
+  // searchInput.on("focus", function() {
+  //   submitButton.show();
+  //   if (searchInput.val() == "") {
+  //     submitButton.hide();
+  //   };
+  // });
 };
 
 $(document).on( "turbolinks:load", function() {

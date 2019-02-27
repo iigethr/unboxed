@@ -3,14 +3,16 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
-      # Lets add login and use this the same way as github
+      # GitHub Info
+      t.string  :login
+      t.string  :login_type
       t.string  :name
       t.text    :bio
       t.integer :public_repos
+      t.string  :avatar_url
+      t.string  :gravatar_id
+      # Processed by app
       t.string  :favorite_language
-      ## avatar_url
-      ## Lets add login type
-      ## user or organization?
 
       t.timestamps
     end

@@ -18,42 +18,21 @@
       .content-item
         %p.text-center= flash[:notice]
 
+- if @user.presence
+  = render partial: "user", locals: { user: @user }
+// Need to add if the search comes back empty!!!
+
 /* Search form */
-= form_tag dashboard_index_path, method: "get", class: "col-small-1-1 altai-center", autocomplete: :off do
+= form_tag dashboard_index_path, method: "get", class: "col-medium-1-1 altai-center", autocomplete: :off do
   %fieldset
     .field-row
       .field
         .input.pg-12
-          = text_field_tag :name, nil, class: "search"
+          = text_field_tag :login, nil, class: "search"
     .field-row
       .field
         .submit
           = submit_tag t("dashboard.form.submit"), name: nil, class: "button double-extra-large green wide pg-16"
 
-- if @user.presence
-  = render partial: "user", locals: { user: @user }
-
-/* testing some outputs */
-.content
-  .content-box
-    - if @repos.presence
-      .content-item.red-500-bg
-        = @repos
-    - if @langs.presence
-      .content-item.yellow-500-bg
-        = @langs
-    - if @langs.presence
-      .content-item.green-500-bg
-        = @poll
-    - if @users.presence
-      .content-item.green-500-bg
-        = render partial: "users", locals: { users: @users }
-
-.separator.small
-
-.content
-  .content-box
-    .content-item
-      %h4 GitHub Rates
-    .content-item.red-500-bg
-      %p.red-000-cl= @limit
+- if @users.presence && !@user.presence
+  = render partial: "users", locals: { users: @users }
