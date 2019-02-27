@@ -8,9 +8,7 @@ class UsersController < ApplicationController
     # @users = @get_users.map do |item| item[:name] end
     respond_to do |format|
       format.html { redirect_to root_path}
-      format.json {
-        @users = @users.limit(3)
-      }
+      format.json { @users }
     end
   end
 end

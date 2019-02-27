@@ -34,6 +34,8 @@ gem "mies", "0.0.1.alpha", github: "iigethr/mies"
 gem "bootsnap", ">= 1.1.0", require: false
 # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 gem "figaro", "~> 1.1"
+# Makes http fun! Also, makes consuming restful web services dead easy.
+gem "httparty", "~> 0.16.4"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
