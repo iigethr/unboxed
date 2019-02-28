@@ -1,1 +1,0 @@
-var EasyAutocomplete=function(o){return o.Logger=function n(){this.error=function(o){console.log("ERROR: "+o)},this.warning=function(o){console.log("WARNING: "+o)}},o}(EasyAutocomplete||{});

@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_02_24_185654) do
     t.integer "public_repos"
     t.string "avatar_url"
     t.string "gravatar_id"
-    t.string "favorite_language"
+    t.string "language"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

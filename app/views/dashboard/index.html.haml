@@ -1,37 +1,11 @@
 /* Index */
 
-/* Hero */
-.hero
-  .hero-box
-    .hero-item.altai-center
-      // = image_tag "octocat.png", title: "Unboxed - A GitHub test.", alt: "hero image"
-      = image_tag "icons/favorite.png"
+= render partial: "hero"
 
-.separator.extra-small
-
-/* Content */
-.content
-  .content-box
-    .content-item
-      %h1.text-center.purple-500-cl= t("dashboard.title")
-      %p.text-center.gray-500-cl= t("dashboard.description")
-    - if flash[:notice]
-      .content-item
-        %p.text-center= flash[:notice]
+= render partial: "content"
 
 - if @user.presence
   = render partial: "user", locals: { user: @user }
 
 - if !@user.presence
-  .separator.small
-  /* Search form */
-  = form_tag dashboard_index_path, method: "get", class: "altai-center", autocomplete: :off do
-    %fieldset
-      .field-row
-        .field
-          .input.pg-12
-            = text_field_tag :login, nil, class: "search", placeholder: "Insert username"
-      .field-row
-        .field
-          .submit
-            = submit_tag t("dashboard.form.submit"), name: nil, class: "button double-extra-large purple wide pg-16"
+  = render partial: "form"

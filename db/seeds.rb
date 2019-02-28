@@ -17,7 +17,7 @@
       name: "Bibendum Ligula",
       bio: "Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit.",
       public_repos: 10,
-      favorite_language: "ruby"
+      language: "ruby"
     }
   )
 end

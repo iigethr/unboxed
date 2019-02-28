@@ -6,9 +6,12 @@ en:
   dashboard:
     title: "All you need is Code"
     description: "There's nothing you can do that can't be coded."
+    alert: "Oops! It seems that user doesn't exist. Please try again."
+    clear: "[Clear & Search Again]"
     form:
       input: 'insert "username"'
       submit: "Find User's favorite Language"
+      processing: "We are processing your request..."
   users:
     title: "One Love, One Heart"
     description: "Let's code together and feel all right."

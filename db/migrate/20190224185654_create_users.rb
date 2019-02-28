@@ -12,7 +12,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string  :avatar_url
       t.string  :gravatar_id
       # Processed by app
-      t.string  :favorite_language
+      t.string  :language
 
       t.timestamps
     end

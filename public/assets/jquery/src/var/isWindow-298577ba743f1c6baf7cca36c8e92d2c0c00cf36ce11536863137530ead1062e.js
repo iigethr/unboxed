@@ -1,1 +1,0 @@
-define(function(){"use strict";return function t(n){return null!=n&&n===n.window}});

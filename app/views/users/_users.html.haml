@@ -13,7 +13,7 @@
             %p.left.auto
               %strong= user.login
               = image_tag "icons/favorite.png"
-              %strong= user.favorite_language
+              %strong= user_favorite(user)
             // Last Checked
             // %p.small.right.auto
             //   %strong Last Checked:

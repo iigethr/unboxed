@@ -1,1 +1,0 @@
-bindEvents=function(){$(".altai-center").altaiCenter();$("input[type='submit']");var e=$("input.search"),n={url:"/users.json",getValue:"login",list:{maxNumberOfElements:3,match:{enabled:!0}}};e.easyAutocomplete(n),e.on("keyup keypress",function(e){if(32==e.which)return!1})},$(document).on("turbolinks:load",function(){bindEvents()});

@@ -8,6 +8,15 @@ module ApplicationHelper
 
   # User avatar
   def user_avatar(user = "")
-    image_tag user.try(:avatar_url) || "https://picsum.photos/512/512/?random"
+    image_tag user.try(:avatar_url) || "icons/face.png"
+  end
+
+  # User favorite
+  def user_favorite(user = "")
+    if user.language.presence
+      user.language
+    else
+      "Undefined"
+    end
   end
 end

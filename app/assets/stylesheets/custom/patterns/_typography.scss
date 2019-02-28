@@ -1,0 +1,128 @@
+// Media Query 240px
+// -------------------------------------------------------------
+@media #{$double-extra-small} {
+  h1 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h3 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  h4 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  h5 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  h6 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+// Media Query 360px
+// ------------------------------------------------------------
+@media #{$extra-small} {
+  h1 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  h4 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  h5 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  h6 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+// Media Query 480px
+// -------------------------------------------------------------
+@media #{$small} {
+  h1 {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  h4 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  h5 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+
+  h6 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+// Media Query 720px
+// -------------------------------------------------------------
+@media #{$medium} {
+}
+
+// Media Query 960px
+// -------------------------------------------------------------
+@media #{$large} {
+}
+
+// Media Query 1440px
+// -------------------------------------------------------------
+@media #{$extra-large} {
+}
+
+// Media Query 1920px
+// -------------------------------------------------------------
+@media #{$double-extra-large} {
+}

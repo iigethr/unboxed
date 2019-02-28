@@ -1,8 +1,8 @@
 # Application configuration
 
 default: &default
-  title: "Unboxed"
-  description: "A GitHub test."
+  title: "All you need is Code"
+  description: "There's nothing you can do that can't be coded."
   twitter_username: "@ubxd"
 
 development:

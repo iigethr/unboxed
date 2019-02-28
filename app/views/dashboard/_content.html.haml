@@ -1,0 +1,10 @@
+/* Content */
+
+.content
+  .content-box
+    .content-item
+      %h1.text-center.purple-500-cl= t("dashboard.title")
+      %p.text-center.gray-500-cl= t("dashboard.description")
+    - if flash[:alert]
+      .content-item
+        %p.text-center.red-500-cl= flash[:alert]

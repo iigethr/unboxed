@@ -1,20 +1,33 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-// File:    Brand
-// Project: Unboxed
+// File:    Forms
+// Project: Mies by IIGETHR
 // -------------------------------------------------------------
 
-$class: "brand";
-
-.#{$class} {
-  @include border-box;
-  float: left;
-  .#{$class}-box {
-    @include border-box;
+form {
+  width: 720px;
+  .easy-autocomplete {
+    display: block;
     float: left;
-    .#{$class}-item {
-      @include border-box;
+    max-width: 100%;
+    width: 100%;
+    .easy-autocomplete-container {
+      display: block;
       float: left;
-      padding: 8px;
+      max-width: 100%;
+      width: 100%;
+      ul {
+        @include clear-list;
+        display: block;
+        float: left;
+        max-width: 100%;
+        width: 100%;
+        li {
+          display: block;
+          float: left;
+          max-width: 100%;
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -22,9 +35,19 @@ $class: "brand";
 // Media Query 240px
 // -------------------------------------------------------------
 @media #{$double-extra-small} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
+  form {
+    font-size: 12px;
+    width: 360px;
+    .input {
+      // Input
+      [type="text"] {
+        font-size: 12px;
+      }
+    }
+    // Submit
+    .submit {
+      [type=submit] {
+        font-size: 10px;
       }
     }
   }
@@ -33,9 +56,19 @@ $class: "brand";
 // Media Query 360px
 // ------------------------------------------------------------
 @media #{$extra-small} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
+  form {
+    font-size: 12px;
+    width: 360px;
+    .input {
+      // Input
+      [type="text"] {
+        font-size: 12px;
+      }
+    }
+    // Submit
+    .submit {
+      [type=submit] {
+        font-size: 10px;
       }
     }
   }
@@ -44,54 +77,27 @@ $class: "brand";
 // Media Query 480px
 // -------------------------------------------------------------
 @media #{$small} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
+  form {
+    width: 480px;
   }
 }
 
 // Media Query 720px
 // -------------------------------------------------------------
 @media #{$medium} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
-  }
 }
 
 // Media Query 960px
 // -------------------------------------------------------------
 @media #{$large} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
-  }
 }
 
 // Media Query 1440px
 // -------------------------------------------------------------
 @media #{$extra-large} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
-  }
 }
 
 // Media Query 1920px
 // -------------------------------------------------------------
 @media #{$double-extra-large} {
-  .#{$class} {
-    .#{$class}-box {
-      .#{$class}-item {
-      }
-    }
-  }
 }
