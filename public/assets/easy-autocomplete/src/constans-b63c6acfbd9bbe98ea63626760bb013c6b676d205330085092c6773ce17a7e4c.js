@@ -1,0 +1,1 @@
+var EasyAutocomplete=function(t){return t.Constans=function n(){var e={CONTAINER_CLASS:"easy-autocomplete-container",CONTAINER_ID:"eac-container-",WRAPPER_CSS_CLASS:"easy-autocomplete"};this.getValue=function(t){return e[t]}},t}(EasyAutocomplete||{});
