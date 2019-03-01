@@ -4,23 +4,6 @@
 .user.altai-center
   .user-box
     .separator.small.glow
-    .user-item
-      .user-left
-        = user_avatar(user)
-      .user-right
-        .user-inner
-          %p.left.auto
-            %strong= user.login
-            = image_tag "icons/favorite.png"
-            %strong= user_favorite(user)
-          // Last Checked
-          // %p.small.right.auto
-          //   %strong Last Checked:
-          //   dd-mm-yyyy
-          //   \::
-          //   = link_to "Check again", "#"
-        .user-inner
-          %p.small.left.gray-500-cl= user.bio
-    .separator.small.glow
+    = render partial: "lib/components/user", locals: { user: user }
     .user-item
       = link_to t("dashboard.clear"), root_path, class: "link extra-small altai-center"

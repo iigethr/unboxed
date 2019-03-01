@@ -1,13 +1,14 @@
 # Default application configuration that all configurations inherit from.
 
+exclude: "node_modules/**"
+
 linters:
   EmptyLineBetweenBlocks:
     enabled: false
 
   ImportantRule:
     exclude:
-      - "app/assets/stylesheets/lib/columns/**"
-      - "app/assets/stylesheets/lib/overriders/**"
+      - "app/assets/stylesheets/**"
 
   NestingDepth:
     enabled: false

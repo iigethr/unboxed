@@ -8,7 +8,7 @@ module ApplicationHelper
 
   # User avatar
   def user_avatar(user = "")
-    image_tag user.try(:avatar_url) || "icons/face.png"
+    user.try(:avatar_url) || "icons/face.png"
   end
 
   # User favorite

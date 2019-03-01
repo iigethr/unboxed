@@ -4,6 +4,7 @@
 // -------------------------------------------------------------
 
 form {
+  font-family: $sans;
   width: 720px;
   .easy-autocomplete {
     display: block;
@@ -37,16 +38,17 @@ form {
 @media #{$double-extra-small} {
   form {
     font-size: 12px;
-    width: 360px;
+    width: 240px;
     .input {
       // Input
       [type="text"] {
         font-size: 12px;
       }
     }
-    // Submit
+
     .submit {
-      [type=submit] {
+      // Input
+      [type="submit"] {
         font-size: 10px;
       }
     }
@@ -57,18 +59,12 @@ form {
 // ------------------------------------------------------------
 @media #{$extra-small} {
   form {
-    font-size: 12px;
+    font-size: 14px;
     width: 360px;
     .input {
       // Input
       [type="text"] {
-        font-size: 12px;
-      }
-    }
-    // Submit
-    .submit {
-      [type=submit] {
-        font-size: 10px;
+        font-size: 14px;
       }
     }
   }
@@ -78,7 +74,14 @@ form {
 // -------------------------------------------------------------
 @media #{$small} {
   form {
+    font-size: 14px;
     width: 480px;
+    .input {
+      // Input
+      [type="text"] {
+        font-size: 14px;
+      }
+    }
   }
 }
 

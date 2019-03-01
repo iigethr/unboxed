@@ -1,0 +1,20 @@
+/* User */
+
+.user-item
+  .user-left
+    = image_tag user_avatar(user), title: "#{application_configuration["title"].to_s}", alt: "user image"
+  .user-right
+    .user-inner
+      %p.left.auto
+        %strong= (user.login).truncate(16)
+        = image_tag "icons/favorite.png", title: "#{application_configuration["title"].to_s}", alt: "user favorite image"
+        %strong= user_favorite(user)
+      // Last Checked
+      // %p.small.right.auto
+      //   %strong Last Checked:
+      //   dd-mm-yyyy
+      //   \::
+      //   = link_to "Check again", "#"
+    .user-inner
+      %p.small.left.gray-500-cl= user.bio
+.separator.small.glow

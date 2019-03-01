@@ -1,23 +1,16 @@
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// File:    Base
+// Project: Mies by IIGETHR
+// -------------------------------------------------------------
+
 .easy-autocomplete-container {
   ul {
     @include clear-list;
   }
 }
 
-
 html,
 body {
   background-color: $gray-000;
-}
-
-
-.separator {
-  &.glow {
-    height: 3px !important;
-    -webkit-box-shadow: inset 0px 1px 0px 0px $gray-200;
-    -moz-box-shadow: inset 0px 1px 0px 0px $gray-200;
-    box-shadow: inset 0px 1px 0px 0px $gray-200;
-    background-color: $white;
-    margin: 0 !important;
-  }
+  font-family: $sans;
 }
