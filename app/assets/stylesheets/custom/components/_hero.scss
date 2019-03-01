@@ -17,6 +17,9 @@ $class: "hero";
       @include border-box;
       float: left;
       width: 96px;
+      p {
+        text-transform: capitalize;
+      }
       img {
         width: 100%;
       }

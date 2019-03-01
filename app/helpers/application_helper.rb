@@ -13,8 +13,9 @@ module ApplicationHelper
 
   # User favorite
   def user_favorite(user = "")
-    if user.language.presence
-      user.language
+    language = user.language
+    if language.presence
+      language
     else
       "Undefined"
     end

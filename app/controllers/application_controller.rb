@@ -2,4 +2,5 @@
 
 class ApplicationController < ActionController::Base
   include DataProcessing
+  include Github
 end
