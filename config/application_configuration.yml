@@ -1,9 +1,9 @@
 # Application configuration
 
 default: &default
-  title: "All you need is Code"
-  description: "There's nothing you can do that can't be coded."
-  twitter_username: "@ubxd"
+  title: "UNBOXED - All you need is Code"
+  description: "Search for a GitHub user and find out the favourite programming language based on her/his open source projects."
+  twitter_username: "@iigethr"
 
 development:
   <<: *default

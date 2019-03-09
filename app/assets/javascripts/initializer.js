@@ -1,9 +1,7 @@
 // Initializer
 
-// Bind Events
-bindEvents = function() {
-  $(".altai-center").altaiCenter();
-  // easyAutocomplete
+// easyAutocompleteEvents
+easyAutocompleteEvents = function() {
   var submitButton = $("input[type='submit']");
   var searchInput = $("input.search");
   var options = {
@@ -17,16 +15,19 @@ bindEvents = function() {
       }
     }
   };
-  // submitButton.hide();
   searchInput.easyAutocomplete(options);
   searchInput.on("keyup keypress", function(event) {
-    // Avoid white space
     if (event.which == 32) {
       return false;
     };
   });
-  // Weird things happen when set.
   $(".easy-autocomplete").removeAttr("style");
+};
+
+// Bind Events
+bindEvents = function() {
+  $(".altai-center").altaiCenter();
+  easyAutocompleteEvents();
 };
 
 $(document).on( "turbolinks:load", function() {
